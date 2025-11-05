@@ -292,7 +292,9 @@ Hooks.on("renderChatLog", async () => {
 		// Check if send button already exists to avoid duplicates
 		if ($("#chat-form .send-button").length > 0) return;
 
-		const sendButton = $(`<button type="button" class="button send-button"><i class="fas fa-paper-plane"/></button>`);
+		const sendButton = $(
+			`<button type="button" class="button send-button"><i class="fas fa-paper-plane"/></button>`,
+		);
 		sendButton.on("click", () => {
 			const chatInput = document.querySelector("#chat-message") || document.querySelector(".chat-input");
 			if (chatInput) {
